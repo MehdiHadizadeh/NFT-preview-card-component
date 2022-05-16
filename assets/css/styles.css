@@ -1,0 +1,175 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /* HSL color mode */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-light: hsl(178, 100%, 50%, 0.5);
+  --white: hsl(0, 0%, 100%);
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+
+  /*========== Font and typography ==========*/
+  --normal-font-size: 18px;
+  --body-font: "Outfit", sans-serif;
+
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-medium: 400;
+  --font-semi-bold: 600;
+}
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--main-BG);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*==================== NFT ====================*/
+.NFT-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--card-BG);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 350px;
+  color: var(--soft-blue);
+  box-shadow: 0 1.5rem 3rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.card-iamge-overlay {
+  display: block;
+  position: relative;
+}
+
+.card-iamge-overlay::before,
+.card-iamge-overlay::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-iamge-overlay::before {
+  background-color: var(--cyan-light);
+  border-radius: 0.5rem;
+}
+
+.card-iamge-overlay::after {
+  background-image: url("../images/icon-view.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-100%);
+}
+
+.card-iamge-overlay:hover::before,
+.card-iamge-overlay:hover::after {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 1.5rem 0;
+  border-bottom: 1px var(--line) solid;
+}
+
+.card-title {
+  color: var(--white);
+  font-weight: var(--font-semi-bold);
+  font-size: 22px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-description {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-light);
+  margin: 1rem 0 1.5rem 0;
+  line-height: 1.625rem;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info--item {
+  display: flex;
+  align-items: center;
+  gap: 0.405rem;
+}
+
+.card-info--item.price {
+  color: var(--cyan);
+  font-weight: var(--font-semi-bold);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-image {
+  width: 35px;
+  height: 35px;
+  border: 1px var(--white) solid;
+  border-radius: 50%;
+}
+
+.creator {
+  font-weight: var(--font-light);
+}
+
+.creator-name {
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-title:hover,
+.creator-name:hover {
+  color: var(--cyan);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .card-description {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-light);
+    margin: 0.75rem 0 1rem 0;
+  }
+}
