@@ -10,8 +10,8 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/qr-code-component-S19BOG1Dq)
-- [Live Site URL](https://mehdihadizadeh.github.io/QR-code-component/)
+- [Solution URL](https://www.frontendmentor.io/solutions/nft-preview-card-component-SJ4-oSkwq)
+- [Live Site URL](https://mehdihadizadeh.github.io/NFT-preview-card-component/)
 
 ## My Process
 
@@ -23,7 +23,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### What I learned
 
-    How to create an interactive overlay to an image with ::before and ::after pseudo-elements in combination with :hover seudo-classes.
+How to create an interactive overlay to an image with ::before and ::after pseudo-elements in combination with :hover seudo-classes.
 
 ```css
 .card-iamge-overlay:hover::before,
